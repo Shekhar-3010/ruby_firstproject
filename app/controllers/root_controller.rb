@@ -1,17 +1,29 @@
 class RootController < ApplicationController
     def contact
-        puts "----------------------------------------------------------------"
-        puts "contact in server"
+        
         render "contact"
 
     end
     def about
-        puts "----------------------------------------------------------------"
-
-        puts "about in server"
+       
         render "about"
 
     end
+    def index
+      
+        render "index"
+    end
+ 
+
+    def api
+        @response={
+            :status => 200,
+            :message => "helllow world"
+        }
+        render json: @response
+    end
+
+
 
 
 
