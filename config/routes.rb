@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # get '/index',to: "root#index"
   get '/response',to: "root#api"
   get '/user/:id/:name' , to:"root#user" 
+  get '/add',to:"root#add"
+  
  
 
  
