@@ -1,20 +1,21 @@
-<%=render "header" %>
-<form method ="POST" action="/add" >
-<%= csrf_meta_tags %>
-  <div class ="col-6" style="margin :0 auto ">
-  <div class="mb-3">
-    <label for="titleid" class="form-label">TITLE</label>
-    <input type="title" class="form-control" id="titleid" placeholder="text">
+<%= render "header" %>
+<form method="POST" action="/add">
+<%=token_tag%>
+<div class="col-6" style="margin: 0 auto">
+    <div class="mb-3">
+      <label for="titleid" class="form-label">TITLE</label>
+      <input type="text" class="form-control" id="titleid" name="title" placeholder="text">
+    </div>
+    <div class="mb-3">
+      <label for="descriptionid" class="form-label">Description</label>
+      <textarea class="form-control" id="descriptionid" name="description:" rows="3"></textarea>
+    </div>
+    <%# <div class="mb-3">
+      <input type="submit" class="btn btn-primary" value="Add" style="display:block;margin:0 auto">
+    </div>   %>
   </div>
   <div class="mb-3">
-    <label for="descriptionid" class="form-label"> Description</label>
-    <textarea class="Text-area" id="descriptionid" rows="3"></textarea>
-  </div>
-
-  <div  class ="mb-3">
-  <input type ="submit" class="btn btn-primary" value ="Add" style="display:block ;margin:0 auto  " >
-  </div>
-  </div>
-</form>
-<%=render "footer" %>
-
+      <input type="Submit" class="btn btn-primary" value="Add" style="display:block;margin:0 auto">
+    </div>  
+  </form>
+<%= render "footer" %>

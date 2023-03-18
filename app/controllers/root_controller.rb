@@ -27,7 +27,17 @@ class RootController < ApplicationController
         render json:params
     end
     def add
-       render json:params
+    @post=Post.new
+    @post.title=params[:title]
+    @post.description=params[:description]
+    @post.save
+    @response={
+        :status => 200,
+        :message => " sucessfully created"
+    }
+    render "index"
+    
+
     end
 
     def index 
