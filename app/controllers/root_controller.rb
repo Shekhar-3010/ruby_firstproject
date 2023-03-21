@@ -10,7 +10,7 @@ class RootController < ApplicationController
 
     end
     def index
-      
+        @post=Post.all
         render "index"
     end
  
@@ -35,6 +35,7 @@ class RootController < ApplicationController
         :status => 200,
         :message => " sucessfully created"
     }
+    @posts=Post.all
     render "index"
     
 
